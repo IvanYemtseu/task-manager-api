@@ -1,12 +1,24 @@
-# Task manager application (REST API)
-Instructions:
-You have POST GET PUT DELETE commands
-Priority levels: LOW, MEDIUM, HIGH
-Task status: TODO, IN_PROGRESS, DONE
+# Task Manager Application (REST API)
 
-Interaction examples:
-Create task.
---------------------------------
+Instructions:
+This project provides a REST API for managing tasks.
+Supported HTTP methods: POST, GET, PUT, DELETE.
+
+Priority Levels:
+- LOW
+- MEDIUM
+- HIGH
+
+Task Status:
+- TODO
+- IN_PROGRESS
+- DONE
+
+---
+
+## Interaction Examples
+
+### 1. Create Task
 POST http://localhost:8080/api/tasks
 Content-Type: application/json
 
@@ -16,9 +28,10 @@ Content-Type: application/json
   "status": "TODO",
   "priority": "HIGH"
 }
---------------------------------
-Update task.
---------------------------------
+
+---
+
+### 2. Update Task
 PUT http://localhost:8080/api/tasks/1
 Content-Type: application/json
 
@@ -28,9 +41,23 @@ Content-Type: application/json
   "status": "DONE",
   "priority": "HIGH"
 }
-------------------------------
-Delete task: DELETE http://localhost:8080/api/tasks/{task number}
-Get task(s): DELETE hGET http://localhost:8080/api/tasks
-Get tasks by status: GET http://localhost:8080/api/tasks/status/{TODO}
 
-@github.com/IvanYemtseu
+---
+
+### 3. Delete Task
+DELETE http://localhost:8080/api/tasks/{taskId}
+
+---
+
+### 4. Get All Tasks
+GET http://localhost:8080/api/tasks
+
+---
+
+### 5. Get Tasks by Status
+GET http://localhost:8080/api/tasks/status/{TODO}
+
+---
+
+Author:
+[github.com/IvanYemtseu](https://github.com/IvanYemtseu)
